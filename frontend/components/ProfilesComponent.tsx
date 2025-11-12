@@ -39,7 +39,7 @@ export function ProfilesComponent() {
   };
 
   const handleDelete = async (id: string) => {
-    if (confirm('Are you sure you want to delete this profile?')) {
+    if (confirm('Tem certeza que deseja deletar este perfil?')) {
       try {
         await deleteProfile(id);
       } catch (err) {
@@ -48,11 +48,11 @@ export function ProfilesComponent() {
     }
   };
 
-  if (loading) return <div className="p-4">Loading profiles...</div>;
+  if (loading) return <div className="p-4">Carregando perfis...</div>;
 
   return (
     <div className="p-4">
-      <h2 className="mb-4 text-2xl font-bold">Profiles Management</h2>
+      <h2 className="mb-4 text-2xl font-bold">Gerenciamento de Perfis</h2>
 
       {profilesError && <div className="mb-4 p-4 bg-red-100 text-red-700 rounded">{profilesError}</div>}
 
@@ -64,7 +64,7 @@ export function ProfilesComponent() {
         }}
         className="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
       >
-        {showForm ? 'Cancel' : 'Add New Profile'}
+        {showForm ? 'Cancelar' : 'Adicionar Novo Perfil'}
       </button>
 
       {showForm && (
@@ -73,7 +73,7 @@ export function ProfilesComponent() {
             <input
               type="text"
               name="name"
-              placeholder="Profile Name"
+              placeholder="Nome do Perfil"
               value={formData.name}
               onChange={handleInputChange}
               required
@@ -83,7 +83,7 @@ export function ProfilesComponent() {
               type="submit"
               className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
             >
-              {editingId ? 'Update Profile' : 'Create Profile'}
+              {editingId ? 'Atualizar Perfil' : 'Criar Perfil'}
             </button>
           </div>
         </form>
@@ -98,13 +98,13 @@ export function ProfilesComponent() {
                 onClick={() => handleEdit(profile)}
                 className="flex-1 px-3 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-600"
               >
-                Edit
+                Editar
               </button>
               <button
                 onClick={() => handleDelete(profile.id)}
                 className="flex-1 px-3 py-2 bg-red-500 text-white text-sm rounded hover:bg-red-600"
               >
-                Delete
+                Deletar
               </button>
             </div>
           </div>
@@ -112,7 +112,7 @@ export function ProfilesComponent() {
       </div>
 
       {profiles.length === 0 && !loading && (
-        <div className="mt-4 p-4 text-center text-gray-500">No profiles found</div>
+        <div className="mt-4 p-4 text-center text-gray-500">Nenhum perfil encontrado</div>
       )}
     </div>
   );
