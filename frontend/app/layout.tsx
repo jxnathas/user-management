@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "User Management",
-  description: "Manage users and profiles",
+  title: "Gerenciamento de Usuários",
+  description: "Gerenciar usuários e perfis",
 };
 
 export default function RootLayout({
