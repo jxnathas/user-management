@@ -7,7 +7,7 @@ export function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gray-800 text-white shadow">
+    <nav className="bg-gray-900 text-white shadow">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold">
           Gerenciamento de Usuários
