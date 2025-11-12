@@ -50,22 +50,14 @@ export default function Home() {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-zinc-400 dark:text-zinc-600 mt-1">•</span>
-              <span>Gerenciar perfis de usuários com controle de acesso baseado em papéis</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-zinc-400 dark:text-zinc-600 mt-1">•</span>
-              <span>Interface limpa e minimalista inspirada em macOS</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-zinc-400 dark:text-zinc-600 mt-1">•</span>
-              <span>Construído com Next.js, TypeScript e Tailwind CSS</span>
+              <span>Gerenciar perfis de usuários</span>
             </li>
           </ul>
         </div>
 
         {/* Footer */}
         <div className="border-t border-zinc-200 dark:border-zinc-800 pt-8 text-sm text-zinc-600 dark:text-zinc-400">
-          <p>Sistema de Gerenciamento de Usuários • Construído com Next.js</p>
+          <p>Sistema de Gerenciamento de Usuários • Construído com Next.js • TypeScript • Tailwind CSS • Nest.js</p>
         </div>
       </div>
     </div>
