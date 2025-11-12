@@ -171,4 +171,23 @@ A API segue os padrões HTTP apropriados:
 3. Controllers delegam lógica para Services
 4. Services manipulam dados e retornam respostas
 5. Frontend renderiza os dados com React
-6. Componentes customizados gerenciam estado com hooks 
+6. Componentes customizados gerenciam estado com hooks
+
+## O que poderia ser melhorado
+
+### Autenticação
+- Implementar JWT (JSON Web Tokens) para autenticação segura
+- Adicionar endpoints de login e logout
+- Incluir refresh tokens para manter sessões
+- Implementar hash de senhas com bcrypt
+- Adicionar validação de email com confirmação
+
+### Controle de Acesso (CASL)
+- Implementar CASL para controle granular de permissões
+- Definir políticas de acesso baseadas em papéis (Role-Based Access Control)
+- Controlar quais usuários podem visualizar, criar, atualizar ou deletar recursos
+- Implementar middleware de autorização nos controllers
+- Adicionar validação de permissões no frontend para melhor UX 
+
+### Conexão com banco de dados
+- Implementar propiamente uma conexão com banco de dados para persistência
