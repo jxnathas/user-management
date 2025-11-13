@@ -1,6 +1,8 @@
 # Desafio Fullstack - Gestão de Usuários
 
-Sistema para cadastro e gerenciamento de usuários e perfis, com APIs RESTful robustas e interface responsiva.
+Sistema para cadastro e gerenciamento de usuários e perfis, com APIs RESTful.
+Como o objetivo do desafio é criar uma aplicação simples, não fugi da proposta
+Caso tenha interesse em um projeto semelhante mais completo https://github.com/jxnathas/full-user-management
 
 ## Pré-requisitos
 
