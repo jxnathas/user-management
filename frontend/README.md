@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend - Interface de Gerenciamento
 
-## Getting Started
+Interface moderna e responsiva construída com Next.js para gerenciar usuários e perfis.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em `http://localhost:3001`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Desenvolvimento
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Desenvolvimento (watch mode)
+npm run dev
 
-## Learn More
+# Build para produção
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Executar build de produção
+npm run start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Linting
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Arquitetura
 
-## Deploy on Vercel
+### Estrutura de Pastas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **`app/`** - Pages da aplicação (Next.js 13+ App Router)
+- **`components/`** - Componentes reutilizáveis
+- **`hooks/`** - Hooks customizados para consumir API
+- **`lib/`** - Utilitários e configurações
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Componentes Principais
+
+- **Navigation** - Barra de navegação sticky com indicador de página ativa
+- **Card** - Componente reutilizável para exibir conteúdo
+- **UsersComponent** - Interface para gerenciar usuários
+- **ProfilesComponent** - Interface para gerenciar perfis
+
+### Hooks Customizados
+
+- **`useUsers`** - Gerencia estado e requisições de usuários
+- **`useProfiles`** - Gerencia estado e requisições de perfis
+
+## Design System
+
+- **Tailwind CSS** - Estilização utilitária
+
+## Configuração da API
+
+O arquivo `lib/api.ts` contém a configuração base para requisições HTTP. Configure a URL da API conforme necessário:
+
+```typescript
+const API_URL = 'http://localhost:3000'; // Padrão
+```
+
+## Próximas Melhorias
+
+- Implementar autenticação com JWT
+- Adicionar paginação nas listagens
+- Implementar busca e filtros avançados
+- Validação em tempo real de formulários
+- Confirmação de ações destrutivas (delete)
+- Toast notifications para feedback do usuário
+- Suporte a temas customizáveis
