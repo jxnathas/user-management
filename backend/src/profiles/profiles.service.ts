@@ -11,8 +11,7 @@ export class ProfilesService {
 
   create(createProfileDto: CreateProfileDto): Profile {
     const profile: Profile = {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      id: uuidv4() as string,
+      id: uuidv4(),
       name: createProfileDto.name,
     };
     this.profiles.push(profile);

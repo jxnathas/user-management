@@ -22,7 +22,7 @@ export class UsersService {
 
   create(createUserDto: CreateUserDto): User | null {
     const user: User = {
-      id: uuidv4() as string,
+      id: uuidv4(),
       firstName: createUserDto.firstName,
       lastName: createUserDto.lastName,
       email: createUserDto.email,
